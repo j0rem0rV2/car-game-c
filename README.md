@@ -70,24 +70,6 @@ Esse é um jogo simples feito em C que roda direto no terminal. O objetivo? Desv
 
 ---
 
-## Código-Fonte
-
-### Versão Windows
-
-```c
-#include <conio.h>
-// ... (restante do código)
-```
-
-### Versão Linux
-
-```c
-#include <termios.h>
-// ... (restante do código)
-```
-
----
-
 ## Notas Técnicas
 
 - **Linux:** O jogo reconfigura o terminal temporariamente para permitir leitura não bloqueante.
