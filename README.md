@@ -3,9 +3,6 @@
 Bem-vindo ao **Jogo de Corrida de Carros**!  
 Esse é um jogo simples feito em C que roda direto no terminal. O objetivo? Desviar dos obstáculos controlando seu carro com as teclas `A` (para a esquerda) e `D` (para a direita).
 
-![Demonstração do Jogo](https://via.placeholder.com/400x200.png?text=Game+Demo)  
-*Imagem ilustrativa — substitua pelo screenshot real do jogo!*
-
 ---
 
 ## Funcionalidades
