@@ -1,88 +1,106 @@
 # Jogo de Corrida de Carros em C
 
-Um jogo simples de corrida em terminal onde você evita obstáculos controlando um carro com as teclas `A` (esquerda) e `D` (direita).
+Bem-vindo ao **Jogo de Corrida de Carros**!  
+Esse é um jogo simples feito em C que roda direto no terminal. O objetivo? Desviar dos obstáculos controlando seu carro com as teclas `A` (para a esquerda) e `D` (para a direita).
 
-![Demonstração do Jogo](https://via.placeholder.com/400x200.png?text=Game+Demo) *(Imagem ilustrativa)*
+![Demonstração do Jogo](https://via.placeholder.com/400x200.png?text=Game+Demo)  
+*Imagem ilustrativa — substitua pelo screenshot real do jogo!*
+
+---
 
 ## Funcionalidades
-- Controle do carro (`^`) para evitar obstáculos (`#`).
-- Pontuação aumenta conforme você avança.
-- Compatível com **Windows** e **Linux** (códigos separados).
+
+- **Controle do carro:** Movimente seu carro (`^`) para evitar obstáculos (`#`).
+- **Pontuação dinâmica:** Quanto mais você avança, maior a pontuação.
+- **Compatibilidade:** Funciona tanto em **Windows** quanto em **Linux** (códigos separados).
+
+---
 
 ## Requisitos
+
 ### Windows
 - Compilador C (ex: [MinGW](http://www.mingw.org/)).
-- Biblioteca `conio.h` (já incluída no Windows).
+- Biblioteca `conio.h` (já vem com o ambiente Windows).
 
 ### Linux
-- Compilador C (ex: `gcc`).
-- Bibliotecas padrão do Unix (`termios.h`, `fcntl.h`, `unistd.h`).
+- Compilador C (como o `gcc`).
+- Bibliotecas padrão do Unix: `termios.h`, `fcntl.h` e `unistd.h`.
+
+---
 
 ## Como Compilar e Executar
 
 ### Versão Windows (`corrida_windows.c`)
-1. Compile:
+1. **Compile:**
    ```bash
+   gcc corrida_windows.c -o corrida_windows
+   ```
+2. **Execute:**
+   ```bash
+   ./corrida_windows
+   ```
 
-   Execute:
+### Versão Linux (`corrida_linux.c`)
+1. **Compile:**
+   ```bash
+   gcc corrida_linux.c -o corrida_linux
+   ```
+2. **Execute:**
+   ```bash
+   ./corrida_linux
+   ```
 
-bash
-Copy
-./corrida_windows
-Versão Linux (corrida_linux.c)
-Compile:
+---
 
-bash
-Copy
-gcc corrida_linux.c -o corrida_linux
-Execute:
+## Estrutura do Código
 
-bash
-Copy
-./corrida_linux
-Estrutura do Código
-Função	Descrição
-draw_game()	Renderiza o carro, obstáculos e pontuação.
-update_game()	Atualiza posições e verifica colisões.
-handle_input()	Captura movimentos do jogador.
-Melhorias Futuras
-Adicionar múltiplos obstáculos simultâneos.
+| Função           | Descrição                                       |
+|------------------|-------------------------------------------------|
+| `draw_game()`    | Renderiza o carro, obstáculos e a pontuação.    |
+| `update_game()`  | Atualiza posições e verifica colisões.          |
+| `handle_input()` | Captura os movimentos do jogador.               |
 
-Implementar menu de início/pausa.
+---
 
-Aumentar velocidade progressiva.
+## Melhorias Futuras
 
-Código-Fonte
-Versão Windows
-c
-Copy
+- Adicionar múltiplos obstáculos simultâneos.
+- Implementar menu de início/pausa.
+- Aumentar a velocidade progressivamente.
+
+---
+
+## Código-Fonte
+
+### Versão Windows
+
+```c
 #include <conio.h>
-// ... (código completo fornecido anteriormente)
-Versão Linux
-c
-Copy
+// ... (restante do código)
+```
+
+### Versão Linux
+
+```c
 #include <termios.h>
-// ... (código completo fornecido anteriormente)
-Notas Técnicas
-Linux: O jogo reconfigura o terminal temporariamente para leitura não bloqueante.
+// ... (restante do código)
+```
 
-Interrupção: Use Ctrl+C para sair. No Linux, o terminal é restaurado automaticamente.
+---
 
-Contribuições
-Contribuições são bem-vindas! Abra uma issue ou envie um pull request para:
+## Notas Técnicas
 
-Adicionar gráficos via NCurses.
+- **Linux:** O jogo reconfigura o terminal temporariamente para permitir leitura não bloqueante.
+- **Saída:** Use `Ctrl+C` para sair do jogo. No Linux, o terminal é restaurado automaticamente após a saída.
 
-Melhorar a física do movimento.
+---
 
-Implementar sistema de highscore.
+## Contribuições
 
-Copy
+Contribuições são super bem-vindas! Se quiser ajudar a melhorar o jogo, abra uma _issue_ ou envie um _pull request_. Algumas ideias:
+- Adicionar gráficos via NCurses.
+- Melhorar a física do movimento.
+- Implementar um sistema de highscore.
 
-> **⚠️ Importante**  
-> Substitua o link da imagem de demonstração por uma captura real do seu jogo em ação!
 
-Este README está organizado para:
-1. Funcionar em ambas as plataformas.
-2. Explicar claramente as diferenças entre as versões.
-3. Ser facilmente personalizável com screenshots ou novas funcionalidades.
+---
